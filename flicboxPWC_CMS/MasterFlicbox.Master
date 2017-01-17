@@ -1,0 +1,274 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterFlicbox.master.cs" Inherits="flicboxPWC_CMS.MasterFlicbox" %>
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="en">
+<!--<![endif]-->
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="description" content="It's Flicking Sweet" />
+    <meta name="author" content="Prasad Web Creations" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/retina.css" />
+    <style type="text/css">
+        #lblCartCount {
+            font-size: 12px;
+            background: #ff0000;
+            color: #fff;
+            padding: 0 5px;
+            vertical-align: top;
+        }
+
+        .icon-cart {
+            width: 48px;
+            height: 48px;
+            position: relative;
+            overflow: hidden;
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+            .icon-cart .cart-line-1 {
+                width: 15%;
+                height: 7%;
+                position: absolute;
+                left: 8%;
+                top: 25%;
+                -webkit-transform: rotate(5deg);
+                -moz-transform: rotate(5deg);
+                -ms-transform: rotate(5deg);
+                transform: rotate(5deg);
+                background-color: #000;
+                border-bottom-left-radius: 35%;
+            }
+
+            .icon-cart .cart-line-2 {
+                width: 35%;
+                height: 7%;
+                position: absolute;
+                left: 6%;
+                top: 40%;
+                -webkit-transform: rotate(80deg);
+                -moz-transform: rotate(80deg);
+                -ms-transform: rotate(80deg);
+                transform: rotate(80deg);
+                background-color: #000;
+            }
+
+                .icon-cart .cart-line-2:before {
+                    content: "";
+                    width: 120%;
+                    height: 100%;
+                    position: absolute;
+                    left: 45%;
+                    top: -280%;
+                    -webkit-transform: rotate(-80deg);
+                    -moz-transform: rotate(-80deg);
+                    -ms-transform: rotate(-80deg);
+                    transform: rotate(-80deg);
+                    background-color: inherit;
+                }
+
+                .icon-cart .cart-line-2:after {
+                    content: "";
+                    width: 70%;
+                    height: 100%;
+                    position: absolute;
+                    left: 59%;
+                    top: -670%;
+                    background-color: inherit;
+                    -webkit-transform: rotate(40deg);
+                    -moz-transform: rotate(40deg);
+                    -ms-transform: rotate(40deg);
+                    transform: rotate(40deg);
+                    border-top-left-radius: 50%;
+                    border-bottom-left-radius: 25%;
+                }
+
+            .icon-cart .cart-line-3 {
+                width: 30%;
+                height: 7%;
+                position: absolute;
+                left: 33%;
+                top: 45%;
+                background-color: #000;
+            }
+
+                .icon-cart .cart-line-3:after {
+                    content: "";
+                    width: 124%;
+                    height: 100%;
+                    position: absolute;
+                    top: -150%;
+                    left: -5%;
+                    background-color: inherit;
+                }
+
+            .icon-cart .cart-wheel {
+                width: 12%;
+                height: 12%;
+                background-color: #000;
+                border-radius: 100%;
+                position: absolute;
+                left: 28%;
+                bottom: 20%;
+            }
+
+                .icon-cart .cart-wheel:after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: inherit;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: 200%;
+                    bottom: 0;
+                }
+    </style>
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-81211437-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header id="header" class="header-main">
+            <!-- Begin Navbar -->
+            <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed text-right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Tree Ganesha</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="index.aspx">
+                        <img src="images/flicbox.png" alt="Flicbox" /></a>
+                </div>
+                <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+                    <div class="col-md-8">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="index.aspx">HOME</a></li>
+                            <li><a href="about.aspx">ABOUT US</a></li>
+                            <li><a href="shop.aspx">Shop</a></li>
+                            <li><a href="corporate-gifting.aspx">Corporate Gifting</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="contact.aspx">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="loginArea">
+                            <a id="btnLogin" runat="server" href="~/my-account/login.aspx" data-hover="Login / Register">Login / Register</a>
+                            <br />
+                            <a id="btnUser" runat="server" href="~/my-account/dashboard.aspx"></a>
+                            <asp:ScriptManager ID="ScriptManager1" runat="server" />
+                            <asp:UpdatePanel ID="masterPanel" runat="server" UpdateMode="Conditional">
+                                <ContentTemplate>
+                                    <div>
+                                        <a href="cart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span>
+                                            <asp:Label ID="lblCartCount" runat="server" CssClass="badge badge-warning" ForeColor="White" />
+                                        </a>
+                                    </div>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <!--Body Content-->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div id="footer">
+            <a class="scroll" href="#about">
+                <div class="back-top">&#xf102;</div>
+            </a>
+            <div class="container">
+                <div class="four columns" data-scrollreveal="enter left and move 250px over 1.5s">
+                    <a href="index.html">
+                        <div class="logo-footer"></div>
+                    </a>
+                </div>
+                <div class="four columns" data-scrollreveal="enter bottom and move 250px over 1.5s">
+                    <p>
+                        <i class="icon-footer">&#xf041;</i><span>Flicbox</span><br />
+                        Mumbai, India<br />
+                        +91 9876543210
+                    </p>
+                </div>
+                <div class="three columns" data-scrollreveal="enter right and move 250px over 1.5s">
+                    <div class="social-bottom">
+                        <ul class="list-social">
+                            <li class="icon-soc tipped" data-title="facebook" data-tipper-options='{"direction":"top","follow":"true"}'>
+                                <a href="https://www.facebook.com/Flicbox-155749888158098/" target="_blank">&#xf09a;</a>
+                            </li>
+                            <li class="icon-soc tipped" data-title="twitter" data-tipper-options='{"direction":"top","follow":"true"}'>
+                                <a href="https://twitter.com/flicbox" target="_blank">&#xf099;</a>
+                            </li>
+                            <li class="icon-soc tipped" data-title="instagram" data-tipper-options='{"direction":"top","follow":"true"}'>
+                                <a href="https://www.instagram.com/flicbox_official/" target="_blank">&#xf16d;</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>
+                        <i class="icon-footer">&#xf0e0;</i><a href="mailto:ab@xyz.com" title="">abc@xyz.com</a><br />
+                </div>
+                <div class="five columns" data-scrollreveal="enter right and move 250px over 1.5s">
+                    <p class="right">
+                        Developed by : <a href="http://www.prasadwebcreations.com" target="_blank">Prasad Web Creations</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+    <%--<script type="text/javascript" src="js/jquery.js"></script>--%>
+    <script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="js/classie.js"></script>
+    <script type="text/javascript" src="js/uiMorphingButton_fixed.js"></script>
+    <script type="text/javascript" src="js/flippy.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="js/tipper.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/scrollReveal.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/template-about.js"></script>
+</body>
+</html>

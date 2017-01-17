@@ -1,0 +1,445 @@
+﻿Error Date : 23-12-2016 05:53:28 PM
+Error Message : Could not find stored procedure 'PROC_NEWS_DML'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : CorporateGifting.CallProcedureCorporateGiftingDML()
+
+Error Date : 26-12-2016 04:24:13 PM
+Error Message : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Must issue a STARTTLS command first. n84sm31897966pfk.25 - gsmtp
+Target Site : Void CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+Method Name : Global.SendMail()
+
+Error Date : 26-12-2016 04:31:07 PM
+Error Message : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+Target Site : Void CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+Method Name : Global.SendMail()
+
+Error Date : 26-12-2016 04:34:14 PM
+Error Message : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+Target Site : Void CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+Method Name : Global.SendMail()
+
+Error Date : 26-12-2016 04:35:40 PM
+Error Message : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+Target Site : Void CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+Method Name : Global.SendMail()
+
+Error Date : 26-12-2016 04:37:07 PM
+Error Message : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Must issue a STARTTLS command first. x4sm82041795pgc.14 - gsmtp
+Target Site : Void CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+Method Name : Global.SendMail()
+
+Error Date : 26-12-2016 04:40:24 PM
+Error Message : The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Must issue a STARTTLS command first. 65sm81447415pfl.21 - gsmtp
+Target Site : Void CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+Method Name : Global.SendMail()
+
+Error Date : 27-12-2016 09:04:22 PM
+Error Message : Procedure or function PROC_ContactUS_DML has too many arguments specified.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 28-12-2016 12:30:37 AM
+Error Message : SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+Target Site : System.Threading.Tasks.Task TdsExecuteRPC(System.Data.SqlClient.SqlCommand, System.Data.SqlClient._SqlRPC[], Int32, Boolean, System.Data.Sql.SqlNotificationRequest, System.Data.SqlClient.TdsParserStateObject, Boolean, Boolean, System.Threading.Tasks.TaskCompletionSource`1[System.Object], Int32, Int32)
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 30-12-2016 03:50:08 PM
+Error Message : An SqlParameter with ParameterName '@productImg2' is not contained by this SqlParameterCollection.
+Target Site : System.Data.Common.DbParameter GetParameter(System.String)
+Method Name : ProductMaster.CallProcedureProductMasterDML()
+
+Error Date : 30-12-2016 03:52:37 PM
+Error Message : An SqlParameter with ParameterName '@productImg2' is not contained by this SqlParameterCollection.
+Target Site : System.Data.Common.DbParameter GetParameter(System.String)
+Method Name : ProductMaster.CallProcedureProductMasterDML()
+
+Error Date : 30-12-2016 04:43:22 PM
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ins_dat'.
+Target Site : System.Object GetPropertyValue(System.Object, System.String)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 30-12-2016 04:43:43 PM
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ins_dat'.
+Target Site : System.Object GetPropertyValue(System.Object, System.String)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 05-01-2017 12:28:25
+Error Message : The SelectCommand property has not been initialized before calling 'Fill'.
+Target Site : Int32 Fill(System.Data.DataTable[], Int32, Int32, System.Data.IDbCommand, System.Data.CommandBehavior)
+Method Name : ProductMaster.FillPlansDataGrid()
+
+Error Date : 01-05-2017 18:14:53
+Error Message : Incorrect syntax near 'intproductid'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:16:41
+Error Message : Incorrect syntax near 'intproductid'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:24:43
+Error Message : Incorrect syntax near 'intproductid'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:27:17
+Error Message : Incorrect syntax near 'intproductid'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:28:14
+Error Message : Incorrect syntax near 'intproductid'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:29:45
+Error Message : Could not find control 'lblProductName' in ControlParameter 'varcharProductName'.
+Target Site : System.Object Evaluate(System.Web.HttpContext, System.Web.UI.Control)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:31:05
+Error Message : Could not find control 'lblProductName' in ControlParameter 'varcharProductName'.
+Target Site : System.Object Evaluate(System.Web.HttpContext, System.Web.UI.Control)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:36:35
+Error Message : Could not find control 'lblProductName' in ControlParameter 'varcharProductName'.
+Target Site : System.Object Evaluate(System.Web.HttpContext, System.Web.UI.Control)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:37:36
+Error Message : Object reference not set to an instance of an object.
+Target Site : Void WriteErrorLog(System.String, System.String, System.String, System.String, System.Web.UI.Page)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 18:38:53
+Error Message : Object reference not set to an instance of an object.
+Target Site : Void WriteErrorLog(System.String, System.String, System.String, System.String, System.Web.UI.Page)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-05-2017 19:06:42
+Error Message : Object reference not set to an instance of an object.
+Target Site : Void Page_Load(System.Object, System.EventArgs)
+Method Name : MasterFlicbox.Page_Load()
+
+Error Date : 01-05-2017 19:07:14
+Error Message : Object reference not set to an instance of an object.
+Target Site : Void Page_Load(System.Object, System.EventArgs)
+Method Name : MasterFlicbox.Page_Load()
+
+Error Date : 01-05-2017 19:08:07
+Error Message : Object reference not set to an instance of an object.
+Target Site : Void Page_Load(System.Object, System.EventArgs)
+Method Name : MasterFlicbox.Page_Load()
+
+Error Date : 05-Jan-17 11:57:27 PM
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 05-Jan-17 11:59:09 PM
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 06-Jan-17 12:02:34 AM
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 06-Jan-17 12:18:44 AM
+Error Message : Login failed for user ''.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 06-Jan-17 12:19:26 AM
+Error Message : Login failed for user ''.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 06-Jan-17 12:19:45 AM
+Error Message : Login failed for user ''.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 06-Jan-17 12:20:00 AM
+Error Message : Login failed for user ''.
+Target Site : Boolean TryGetConnection(System.Data.Common.DbConnection, UInt32, Boolean, Boolean, System.Data.Common.DbConnectionOptions, System.Data.ProviderBase.DbConnectionInternal ByRef)
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 06-Jan-17 12:23:55 AM
+Error Message : Login failed for user ''.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : ProductMaster.FillPlansDataGrid()
+
+Error Date : 06-Jan-17 12:24:48 AM
+Error Message : Login failed for user ''.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : ProductMaster.FillPlansDataGrid()
+
+Error Date : 06-Jan-17 12:33:10 AM
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'varcharsupscriptiontype'.
+Target Site : System.Object GetPropertyValue(System.Object, System.String)
+Method Name : BusinessDataBinding.BindRepeater()
+
+Error Date : 06-Jan-17 7:43:30 AM
+Error Message : Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=1370; handshake=2065; [Login] initialization=15; authentication=62; [Post-Login] complete=11038; 
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : ProductMaster.FillPlansDataGrid()
+
+Error Date : 06-Jan-17 8:42:45 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 8:43:11 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 8:43:54 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 8:44:22 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 8:45:13 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 8:45:56 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 9:01:54 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 9:02:30 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 9:07:30 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 06-Jan-17 9:08:17 AM
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 01-06-2017 10:14:15
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : ProductMaster.FillPlansDataGrid()
+
+Error Date : 01-06-2017 11:31:22
+Error Message : Incorrect syntax near ')'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 14-Jan-17 7:50:33 PM
+Error Message : A field or property with the name 'varcharSubscriptionType' was not found on the selected data source.
+Target Site : Boolean TryGetSimplePropertyValue(System.Object, System.Object ByRef)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 14-Jan-17 7:53:17 PM
+Error Message : A field or property with the name 'varcharSubscriptionType' was not found on the selected data source.
+Target Site : Boolean TryGetSimplePropertyValue(System.Object, System.Object ByRef)
+Method Name : BusinessDataBinding.BindGridView()
+
+Error Date : 14-Jan-17 10:54:43 PM
+Error Message : Object reference not set to an instance of an object.
+Target Site : Void BindRepeater(System.Web.UI.WebControls.Repeater, System.String, System.Web.UI.Page)
+Method Name : BusinessDataBinding.BindRepeater()
+
+Error Date : 15-Jan-17 3:26:37 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:28:49 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:33:21 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:33:41 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:34:33 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:37:41 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:38:02 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:53:59 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:54:12 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:54:34 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:55:03 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:56:51 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:57:32 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:57:41 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:57:49 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 3:58:32 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 4:01:03 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 4:01:04 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 4:06:28 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 15-Jan-17 4:07:19 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:27:18 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:27:44 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:28:32 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:28:44 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:52:27 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:52:58 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:53:06 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:53:45 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:54:11 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:54:34 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 16-Jan-17 10:54:46 PM
+Error Message : The type initializer for 'flicboxPWC_CMS.PWC.ShoppingCart' threw an exception.
+Target Site : Void UpdateCartCount()
+Method Name : MasterFlicbox.UpdateCartCount()
+
+Error Date : 01-17-2017 11:23:36
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindRepeater()
+
+Error Date : 01-17-2017 11:23:58
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindRepeater()
+
+Error Date : 17-01-2017 07:04:59 PM
+Error Message : Procedure or function 'PROC_UserDetails_DML' expects parameter '@phone', which was not supplied.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : MyAccountLogin.CallProcedureUserDetailsDML()
+
+Error Date : 17-01-2017 07:50:10 PM
+Error Message : Invalid column name 'varcharSubscriptionType'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : ProductMaster.FillPlansDataGrid()
+
+Error Date : 17-Jan-17 10:37:54 PM
+Error Message : Login failed for user 'sa'.
+Target Site : Void OnError(System.Data.SqlClient.SqlException, Boolean, System.Action`1[System.Action])
+Method Name : BusinessDataBinding.BindRepeater()
+
