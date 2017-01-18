@@ -139,130 +139,130 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divGiftDetails;
         
         /// <summary>
-        /// txtName control.
+        /// txtSenderName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox txtSenderName;
         
         /// <summary>
-        /// txtEmail control.
+        /// txtSenderEmailID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtSenderEmailID;
         
         /// <summary>
-        /// txtPhone control.
+        /// txtSenderPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.TextBox txtSenderPhone;
         
         /// <summary>
-        /// txtAddress control.
+        /// txtSenderAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddress;
+        protected global::System.Web.UI.WebControls.TextBox txtSenderAddress;
         
         /// <summary>
-        /// txtCity control.
+        /// txtSenderCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCity;
+        protected global::System.Web.UI.WebControls.TextBox txtSenderCity;
         
         /// <summary>
-        /// txtState control.
+        /// txtSenderState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtState;
+        protected global::System.Web.UI.WebControls.TextBox txtSenderState;
         
         /// <summary>
-        /// txtPincode control.
+        /// txtSenderPincode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPincode;
+        protected global::System.Web.UI.WebControls.TextBox txtSenderPincode;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtRecieverName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtRecieverName;
         
         /// <summary>
-        /// TextBox2 control.
+        /// txtRecieverEmailID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtRecieverEmailID;
         
         /// <summary>
-        /// TextBox3 control.
+        /// txtRecieverPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtRecieverPhone;
         
         /// <summary>
-        /// TextBox4 control.
+        /// txtRecieverAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtRecieverAddress;
         
         /// <summary>
-        /// TextBox5 control.
+        /// txtRecieverCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtRecieverCity;
         
         /// <summary>
-        /// TextBox6 control.
+        /// txtRecieverState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox txtRecieverState;
         
         /// <summary>
-        /// TextBox7 control.
+        /// txtRecieverPincode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox txtRecieverPincode;
         
         /// <summary>
         /// txtOccasionDetails control.

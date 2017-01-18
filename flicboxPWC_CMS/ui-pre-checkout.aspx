@@ -74,55 +74,55 @@
                         <asp:Button ID="Button1" Text="Clear" runat="server" CssClass="button" CausesValidation="true" ValidationGroup="SAVE"  />
                     </div>
                 </div>
-                <div runat="server" id="divGiftDetails">
+                <div runat="server" id="divGiftDetails" style="display:none">
                     <div class="eight columns">
                         <h4 class="text-left">Sender's Address</h4><br />
                         <div class="two columns text-left">
                             Name: *
                         </div>
                         <div class="five columns">
-                            <asp:TextBox ID="txtName" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtSenderName" runat="server" MaxLength="50"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             Email: *
                         </div>
                         <div class="five columns">
-                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSenderEmailID" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             Phone: *
                         </div>
                         <div class="five columns">
-                            <asp:TextBox ID="txtPhone" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSenderPhone" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             Address: *
                         </div>
                         <div class="five columns">
-                            <asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSenderAddress" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             City: *
                         </div>
                         <div class="five columns">
-                            <asp:TextBox ID="txtCity" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSenderCity" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             State: *
                         </div>
                         <div class="five columns">
-                            <asp:TextBox ID="txtState" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSenderState" runat="server"></asp:TextBox>
                         </div>
                         <div class="two columns text-left">
                             Pincode: *
                         </div>
                         <div class="five columns">
-                            <asp:TextBox ID="txtPincode" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtSenderPincode" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <div class="seven columns">
@@ -131,48 +131,48 @@
                             Name: *
                         </div>
                         <div class="four columns">
-                            <asp:TextBox ID="TextBox1" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="txtRecieverName" runat="server" MaxLength="50"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             Email: *
                         </div>
                         <div class="four columns">
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRecieverEmailID" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             Phone: *
                         </div>
                         <div class="four columns">
-                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRecieverPhone" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             Address: *
                         </div>
                         <div class="four columns">
-                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRecieverAddress" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             City: *
                         </div>
                         <div class="four columns">
-                            <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRecieverCity" runat="server"></asp:TextBox>
                         </div>
 
                         <div class="two columns text-left">
                             State: *
                         </div>
                         <div class="four columns">
-                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRecieverState" runat="server"></asp:TextBox>
                         </div>
                         <div class="two columns text-left">
                             Pincode: *
                         </div>
                         <div class="four columns">
-                            <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRecieverPincode" runat="server"></asp:TextBox>
                         </div>
                     </div>
                     <hr />
