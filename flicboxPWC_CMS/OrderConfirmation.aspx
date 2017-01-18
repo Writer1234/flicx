@@ -33,19 +33,11 @@
             background-color: #FFBABA;
         }
 
-        /* Just for CodePen styling - don't include if you copy paste */
-        html {
-            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-            font-weight: 300;
-            margin: 25px;
-        }
-
-        body {
-            width: 100%;
-        }
+        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div style="height:40px;width:100%;padding-top:10px">&nbsp&nbsp</div>
     <div id="ContentPage" runat="server">
         <div class="success-msg" id="successmsg" runat="server" visible="false">
             <i class="fa fa-check"></i>
@@ -61,22 +53,23 @@
             <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
         </div>
         <div id="payType" runat="server" visible="false">
-            <div style="text-align: center">
-                <h1>You can do Cash On Delivery</h1>
+            <div style="text-align: center;padding-bottom:20px">
+                <h4>You can do Cash On Delivery</h4>
             </div>
-            <div style="width: 100%; height: 50px; border-bottom: 1px solid black; text-align: center">
-                <span style="font-size: 100px; background-color: #F3F5F6; padding: 0 10px;">OR
+            <div style="width: 100%; height: 20px; border-bottom: 1px solid black; text-align: center">
+                <span style="font-size: 40px; background-color: #e7e7e7; padding: 0 10px;">OR
             <!--Padding is optional-->
                 </span>
             </div>
             <br />
             <div style="text-align: center">
-                <h1>For Gift item you have to use paytm for Order Confirmation.
+                <h4>For Gift item you have to use paytm for Order Confirmation.
             <br />
-                    You can pay by Patym using following QR Code</h1>
+                    You can pay by Patym using following QR Code</h4>
+                <img src="images/J6tFc.png" style="align-content: center" />
             </div>
             <br />
-            <img src="images/J6tFc.png" style="align-content: center" />
+            
         </div>
     </div>
 </asp:Content>

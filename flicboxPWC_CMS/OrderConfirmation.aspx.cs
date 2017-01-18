@@ -49,8 +49,9 @@ namespace flicboxPWC_CMS
                             {
 
                                 SqlCommand cmd = new SqlCommand();
-                                cmd.CommandText = string.Format("select 1 from ordermaster where intorderid={0}", OrderID);
-                                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                                cmd.Connection = Con;
+                                cmd.CommandText = string.Format("select 1 from ordersmaster where intorderid={0}", OrderID);
+                                cmd.CommandType = System.Data.CommandType.Text;
                                 Con.Open();
                                 var data = cmd.ExecuteScalar();
 
@@ -59,7 +60,7 @@ namespace flicboxPWC_CMS
                                     successmsg.Visible = true;
                                     errormsg.Visible = false;
                                     payType.Visible = true;
-                                    lblSuccess.Text = "Order Placed succesfully.";
+                                    lblSuccess.Text = "Order has been placed succesfully and Mail has been send to you with details.";
                                 }
                                 else
                                 {
@@ -86,8 +87,8 @@ namespace flicboxPWC_CMS
                 }
 
             }
-            catch (System.Threading.ThreadInterruptedException) { }   
-            catch (Exception)
+            catch (System.Threading.ThreadAbortException) { }   
+            catch (Exception ex)
             {
                 
                 throw;
