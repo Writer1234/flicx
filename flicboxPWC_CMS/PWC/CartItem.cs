@@ -31,6 +31,8 @@ namespace flicboxPWC_CMS.PWC
             get { return Prod.ProductPrice; }
         }
 
+        public ProductType productType { get; set; }
+
         private ProductMaster _product = null;
         public ProductMaster Prod
         {
@@ -54,9 +56,10 @@ namespace flicboxPWC_CMS.PWC
         #endregion
 
         // CartItem constructor just needs a productId
-        public CartItem(int productId)
+        public CartItem(int productId,ProductType productype = ProductType.Subscription)
         {
             this.ProductId = productId;
+            this.productType = productype;
         }
 
         /**
@@ -67,7 +70,7 @@ namespace flicboxPWC_CMS.PWC
          */
         public bool Equals(CartItem item)
         {
-            return item.ProductId == this.ProductId;
+            return item.ProductId == this.ProductId && item.productType==this.productType;
         }
     }
 }

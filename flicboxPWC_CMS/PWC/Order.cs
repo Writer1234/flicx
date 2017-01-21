@@ -22,6 +22,7 @@ namespace flicboxPWC_CMS.PWC
                 ProductMaster obj = new ProductMaster(item.ProductId);
                 obj.Quanity = item.Quantity;
                 obj.ProductTotal = (obj.Quanity * obj.ProductPrice);
+                obj.productTypeName = item.productType;
                 productlist.Add(obj);
             }
 
@@ -39,7 +40,7 @@ namespace flicboxPWC_CMS.PWC
             foreach (CartItem item in items)
             {
                 ProductMaster obj = new ProductMaster(item.ProductId);
-                if(obj.SubscriptionName.ToUpper()=="GIFT")
+                if(item.productType==ProductType.Gift)
                 {
                     IsGift = true;
                     break;
@@ -58,9 +59,10 @@ namespace flicboxPWC_CMS.PWC
             table.Columns.Add("ProductId", typeof(long));
             table.Columns.Add("Quantity", typeof(int));
             table.Columns.Add("UnitPrice", typeof(float));
+            table.Columns.Add("ProductType", typeof(string));
             foreach (CartItem id in items)
             {
-                table.Rows.Add(id.ProductId, id.Quantity, id.UnitPrice);
+                table.Rows.Add(id.ProductId, id.Quantity, id.UnitPrice,id.productType);
                 //i++;
             }
             return table;

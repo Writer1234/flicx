@@ -81,10 +81,10 @@ namespace flicboxPWC_CMS.PWC
         /**
          * AddItem() - Adds an item to the shopping 
          */
-        public void AddItem(int productId)
+        public void AddItem(int productId,ProductType producttype=ProductType.Subscription)
         {
             // Create a new item to add to the cart
-            CartItem newItem = new CartItem(productId);
+            CartItem newItem = new CartItem(productId, producttype);
 
             // If this item already exists in our list of items, increase the quantity
             // Otherwise, add the new item to the list
@@ -109,17 +109,17 @@ namespace flicboxPWC_CMS.PWC
         /**
          * SetItemQuantity() - Changes the quantity of an item in the cart
          */
-        public void SetItemQuantity(int productId, int quantity)
+        public void SetItemQuantity(int productId, int quantity, ProductType producttype = ProductType.Subscription)
         {
             // If we are setting the quantity to 0, remove the item entirely
             if (quantity == 0)
             {
-                RemoveItem(productId);
+                RemoveItem(productId, producttype);
                 return;
             }
 
             // Find the item and update the quantity
-            CartItem updatedItem = new CartItem(productId);
+            CartItem updatedItem = new CartItem(productId, producttype);
 
             foreach (CartItem item in Items)
             {
@@ -134,9 +134,9 @@ namespace flicboxPWC_CMS.PWC
         /**
          * RemoveItem() - Removes an item from the shopping cart
          */
-        public void RemoveItem(int productId)
+        public void RemoveItem(int productId, ProductType producttype = ProductType.Subscription)
         {
-            CartItem removedItem = new CartItem(productId);
+            CartItem removedItem = new CartItem(productId, producttype);
             Items.Remove(removedItem);
         }
         #endregion

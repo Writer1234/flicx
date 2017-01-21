@@ -73,6 +73,24 @@ namespace flicboxPWC_CMS.PWC
             }
         }
 
+        public void BindListView(ListView listView, string _strQuery, System.Web.UI.Page _page)
+        {
+            try
+            {
+                da = new SqlDataAdapter(_strQuery, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                listView.DataSource = dt;
+                listView.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Global.WriteErrorLog(ex.Message.ToString(), ex.StackTrace.ToString(), ex.TargetSite.ToString(), "BusinessDataBinding.BindDataList()", _page);
+                _page.Session.Abandon();
+                _page.Response.Redirect("ErrorPage.aspx?errno=2");
+            }
+        }
+
         public void BindDropDownList(DropDownList _ddlList, string _strQuery, string _strInitialValueField, string _strInitialTextField, System.Web.UI.Page _page)
         {
             try

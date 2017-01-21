@@ -106,6 +106,8 @@ namespace flicboxPWC_CMS.PWC
             set { strSubscriptionType = value; }
         }
 
+        public ProductType productTypeName { get; set; }
+
         public string SubscriptionName
         {
             get { return _SubscriptionTypeName; }
