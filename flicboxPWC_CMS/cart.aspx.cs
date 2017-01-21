@@ -91,7 +91,7 @@ namespace flicboxPWC_CMS
                 }
 
             }
-            catch (System.Threading.ThreadInterruptedException) { }
+            catch (System.Threading.ThreadAbortException) { }
             catch(Exception)
             { }   
 
@@ -112,7 +112,7 @@ namespace flicboxPWC_CMS
                     Response.Redirect("index.aspx", true);
                 }
             }
-            catch (System.Threading.ThreadInterruptedException) { }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception)
             { }
 
@@ -125,6 +125,7 @@ namespace flicboxPWC_CMS
             {
                 ClientScript.RegisterStartupScript(GetType(), "id", "GetTotal()", true);
             }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception)
             {
 
@@ -166,6 +167,7 @@ namespace flicboxPWC_CMS
                 //HFVProductID.Value = ddl.SelectedValue.ToString();
 
             }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception ex)
             {
                 Global.WriteErrorLog(ex.Message.ToString(), ex.StackTrace, ex.TargetSite.ToString(), "cart.ddlSubscriptionType_SelectedIndexChanged()", _page);
@@ -182,6 +184,7 @@ namespace flicboxPWC_CMS
                  bindgrid();
                 callJavascript();
             }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception ex)
             {
 
@@ -234,6 +237,7 @@ namespace flicboxPWC_CMS
                 }
 
             }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception ex)
             {
 

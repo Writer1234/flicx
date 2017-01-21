@@ -97,12 +97,21 @@
                                         </EditItemTemplate>
                                         <ItemStyle Wrap="True" Width="250px"></ItemStyle>
                                     </asp:TemplateField>
+                                     <asp:TemplateField HeaderText="Product Type" ItemStyle-HorizontalAlign="Center">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblProductType" runat="server" Text='<%#Eval("productTypeName")%>'></asp:Label>
+                                        </ItemTemplate>
+                                        <EditItemTemplate>
+                                            <asp:Label ID="lblEditProductType" runat="server" Text='<%#Eval("productTypeName")%>'></asp:Label>
+                                        </EditItemTemplate>
+                                        <ItemStyle Wrap="True" Width="250px"></ItemStyle>
+                                    </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Subscription Type" ItemStyle-Wrap="true" ItemStyle-HorizontalAlign="Center">
                                         <ItemTemplate>
                                             <asp:Label ID="lblSubscription" runat="server" Text='<%# Eval("SubscriptionName") %>'></asp:Label>
                                         </ItemTemplate>
                                         <EditItemTemplate>
-                                            <asp:DropDownList ID="ddlSubscriptionType" runat="server"  DataTextField="NAME" DataValueField="ID" AutoPostBack="true"  OnSelectedIndexChanged="ddlSubscriptionType_SelectedIndexChanged">
+                                            <asp:DropDownList ID="ddlSubscriptionType" runat="server" style="border:1px solid;"  DataTextField="NAME" DataValueField="ID" AutoPostBack="true"  OnSelectedIndexChanged="ddlSubscriptionType_SelectedIndexChanged">
                                             </asp:DropDownList>
                                             <asp:SqlDataSource ID="sqlDataSource2" runat="server"
                                                 ConnectionString="<%$ ConnectionStrings:conStr %>"
@@ -121,7 +130,7 @@
                                             <asp:HiddenField ID="HFVProductID" runat="server" />
                                         </ItemTemplate>
                                         <EditItemTemplate>
-                                            <asp:TextBox ID="txtEditQty" runat="server" Text='<%# Eval("Quanity") %>' onkeypress="return isNumberKey(event)"></asp:TextBox>
+                                            <asp:TextBox ID="txtEditQty" runat="server" Text='<%# Eval("Quanity") %>' BorderStyle="Solid" BorderWidth="1"  onkeypress="return isNumberKey(event)"></asp:TextBox>
                                         </EditItemTemplate>
                                         <ItemStyle Wrap="True" Width="250px"></ItemStyle>
                                     </asp:TemplateField>
