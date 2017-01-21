@@ -13,9 +13,10 @@
     <meta name="author" content="Prasad Web Creations" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />
+    <%--<link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />--%>
     <link rel="stylesheet" type="text/css" href="css/style-intro.css" />
     <link rel="stylesheet" href="css/retina.css" />
+    <link href="css/SkewedCSS.css" rel="stylesheet" />
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="images/favicon.png" />
@@ -125,15 +126,13 @@
                             <tr>
                                 <td>
                                     <div class="cl-effect-11">
-                                        <asp:LinkButton ID="btnOneTime" runat="server" data-hover='<%# Eval("OnetimeID").ToString()!="0" ? "One Time": "One Time Comming Soon"  %>' OnClick="btnOneTime_Click"
-                                            CommandArgument='<%# Eval("OnetimeID")%>'
-                                            Visible='<%# Eval("OnetimeID").ToString()!="0" ? true: false  %>'><%# Eval("OnetimeID").ToString()!="0" ? "One Time": "One Time Comming Soon"  %></asp:LinkButton>
+                                        <asp:LinkButton ID="btnOneTime" runat="server" data-hover="One Time" OnClick="btnOneTime_Click">One Time</asp:LinkButton>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="cl-effect-11">
-                                        <asp:LinkButton ID="btnGift" runat="server" data-hover='<%# Eval("GiftID").ToString()!="0" ? "Gift": "Gift Comming Soon"  %>' OnClick="btnGift_Click" Visible='<%# Eval("GiftID").ToString()!="0" ? true: false  %>' CommandArgument='<%# Eval("GiftID")%>'>
-                                    <%# Eval("GiftID").ToString()!="0" ? "Gift": "Gift Comming Soon"  %>
+                                        <asp:LinkButton ID="btnGift" runat="server" data-hover='Gift' OnClick="btnGift_Click">
+                                         Gift
                                         </asp:LinkButton>
                                     </div>
                                 </td>

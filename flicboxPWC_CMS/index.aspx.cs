@@ -13,6 +13,22 @@ namespace flicboxPWC_CMS
         BusinessDataBinding objDatabinder = new BusinessDataBinding();
         ProductMaster objProdMaster = new ProductMaster();
 
+        private UrlEncode _objURL;
+        public UrlEncode objURL
+        {
+            get
+            {
+
+                if (_objURL == null)
+                {
+                    _objURL = new UrlEncode();
+                }
+
+                return _objURL;
+            }
+
+        }
+
 
         public void UpdateCartCount()
         {
@@ -97,8 +113,10 @@ namespace flicboxPWC_CMS
             try
             {
                 LinkButton lnkOneTime = (LinkButton)sender;
-                string ProductID = lnkOneTime.CommandArgument;
-                ShoppingCart.Instance.AddItem(Convert.ToInt32(ProductID));
+                RepeaterItem rptProduct = (RepeaterItem)lnkOneTime.NamingContainer;
+                DropDownList dllMonthSub = (DropDownList)rptProduct.FindControl("ddlSubScription");
+                string ProductID = dllMonthSub.SelectedValue;
+                ShoppingCart.Instance.AddItem(Convert.ToInt32(ProductID),ProductType.OneTime);
                 Response.Redirect("cart.aspx", true);
             }
             catch (System.Threading.ThreadInterruptedException) { }
@@ -115,9 +133,8 @@ namespace flicboxPWC_CMS
             try
             {
                 LinkButton lnkOneTime = (LinkButton)sender;
-                string ProductID = lnkOneTime.CommandArgument;
-                ShoppingCart.Instance.AddItem(Convert.ToInt32(ProductID));
-                Response.Redirect("cart.aspx", true);
+                string random =(new Random()).Next().ToString();
+                Response.Redirect(string.Format("ui-pre-checkout-gift.aspx?rnd={0}&Type={1}", random, objURL.encrytedText(ProductType.Gift.ToString())), true);
 
             }
             catch (System.Threading.ThreadInterruptedException) { }
