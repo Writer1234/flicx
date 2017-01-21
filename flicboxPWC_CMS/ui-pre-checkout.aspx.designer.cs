@@ -148,6 +148,15 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.WebControls.TextBox txtSenderName;
         
         /// <summary>
+        /// RFVSenderName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSenderName;
+        
+        /// <summary>
         /// txtSenderEmailID control.
         /// </summary>
         /// <remarks>
@@ -155,6 +164,15 @@ namespace flicboxPWC_CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSenderEmailID;
+        
+        /// <summary>
+        /// RFVSenderEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSenderEmail;
         
         /// <summary>
         /// txtSenderPhone control.
@@ -166,6 +184,15 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.WebControls.TextBox txtSenderPhone;
         
         /// <summary>
+        /// RFVSenderPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSenderPhone;
+        
+        /// <summary>
         /// txtSenderAddress control.
         /// </summary>
         /// <remarks>
@@ -173,6 +200,15 @@ namespace flicboxPWC_CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSenderAddress;
+        
+        /// <summary>
+        /// RFVSenderAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSenderAddress;
         
         /// <summary>
         /// txtSenderCity control.
@@ -184,6 +220,15 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.WebControls.TextBox txtSenderCity;
         
         /// <summary>
+        /// RFVSenderCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSenderCity;
+        
+        /// <summary>
         /// txtSenderState control.
         /// </summary>
         /// <remarks>
@@ -191,6 +236,15 @@ namespace flicboxPWC_CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSenderState;
+        
+        /// <summary>
+        /// RFVSenderState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSenderState;
         
         /// <summary>
         /// txtSenderPincode control.
@@ -202,6 +256,15 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.WebControls.TextBox txtSenderPincode;
         
         /// <summary>
+        /// RFVSenderPincode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVSenderPincode;
+        
+        /// <summary>
         /// txtRecieverName control.
         /// </summary>
         /// <remarks>
@@ -209,6 +272,15 @@ namespace flicboxPWC_CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRecieverName;
+        
+        /// <summary>
+        /// RFVRecieverName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVRecieverName;
         
         /// <summary>
         /// txtRecieverEmailID control.
@@ -220,6 +292,15 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.WebControls.TextBox txtRecieverEmailID;
         
         /// <summary>
+        /// RFVRecieverEmailID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVRecieverEmailID;
+        
+        /// <summary>
         /// txtRecieverPhone control.
         /// </summary>
         /// <remarks>
@@ -227,6 +308,15 @@ namespace flicboxPWC_CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRecieverPhone;
+        
+        /// <summary>
+        /// RFVRecieverPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVRecieverPhone;
         
         /// <summary>
         /// txtRecieverAddress control.
@@ -238,6 +328,15 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.WebControls.TextBox txtRecieverAddress;
         
         /// <summary>
+        /// RFVRecieverAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVRecieverAddress;
+        
+        /// <summary>
         /// txtRecieverCity control.
         /// </summary>
         /// <remarks>
@@ -245,6 +344,15 @@ namespace flicboxPWC_CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRecieverCity;
+        
+        /// <summary>
+        /// RFVRecieverCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVRecieverCity;
         
         /// <summary>
         /// txtRecieverState control.
@@ -256,6 +364,15 @@ namespace flicboxPWC_CMS {
         protected global::System.Web.UI.WebControls.TextBox txtRecieverState;
         
         /// <summary>
+        /// RFVRecieverState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVRecieverState;
+        
+        /// <summary>
         /// txtRecieverPincode control.
         /// </summary>
         /// <remarks>
@@ -263,6 +380,15 @@ namespace flicboxPWC_CMS {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtRecieverPincode;
+        
+        /// <summary>
+        /// RFVRecieverPincode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RFVRecieverPincode;
         
         /// <summary>
         /// txtOccasionDetails control.

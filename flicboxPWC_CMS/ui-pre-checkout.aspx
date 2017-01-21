@@ -82,6 +82,7 @@
                         </div>
                         <div class="five columns">
                             <asp:TextBox ID="txtSenderName" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVSenderName" runat="server" ControlToValidate="txtSenderName" ErrorMessage='Sender Name is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -89,6 +90,7 @@
                         </div>
                         <div class="five columns">
                             <asp:TextBox ID="txtSenderEmailID" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVSenderEmail" runat="server" ControlToValidate="txtSenderEmailID" ErrorMessage='Sender Email is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -96,6 +98,7 @@
                         </div>
                         <div class="five columns">
                             <asp:TextBox ID="txtSenderPhone" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVSenderPhone" runat="server" ControlToValidate="txtSenderPhone" ErrorMessage='Sender Phone is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -103,6 +106,7 @@
                         </div>
                         <div class="five columns">
                             <asp:TextBox ID="txtSenderAddress" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVSenderAddress" runat="server" ControlToValidate="txtSenderAddress" ErrorMessage='Sender Address is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -110,6 +114,7 @@
                         </div>
                         <div class="five columns">
                             <asp:TextBox ID="txtSenderCity" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVSenderCity" runat="server" ControlToValidate="txtSenderCity" ErrorMessage='Sender City is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -117,12 +122,14 @@
                         </div>
                         <div class="five columns">
                             <asp:TextBox ID="txtSenderState" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVSenderState" runat="server" ControlToValidate="txtSenderState" ErrorMessage='Sender State is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
                         <div class="two columns text-left">
                             Pincode: *
                         </div>
                         <div class="five columns">
                             <asp:TextBox ID="txtSenderPincode" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVSenderPincode" runat="server" ControlToValidate="txtSenderPincode" ErrorMessage='Sender Pincode is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <div class="seven columns">
@@ -132,6 +139,7 @@
                         </div>
                         <div class="four columns">
                             <asp:TextBox ID="txtRecieverName" runat="server" MaxLength="50"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVRecieverName" runat="server" ControlToValidate="txtRecieverName" ErrorMessage='Reciever Name is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -139,6 +147,7 @@
                         </div>
                         <div class="four columns">
                             <asp:TextBox ID="txtRecieverEmailID" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVRecieverEmailID" runat="server" ControlToValidate="txtRecieverEmailID" ErrorMessage='Reciever EmailID is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -146,6 +155,7 @@
                         </div>
                         <div class="four columns">
                             <asp:TextBox ID="txtRecieverPhone" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVRecieverPhone" runat="server" ControlToValidate="txtRecieverPhone" ErrorMessage='Reciever Phone is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -153,6 +163,7 @@
                         </div>
                         <div class="four columns">
                             <asp:TextBox ID="txtRecieverAddress" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVRecieverAddress" runat="server" ControlToValidate="txtRecieverAddress" ErrorMessage='Reciever Address is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -160,6 +171,7 @@
                         </div>
                         <div class="four columns">
                             <asp:TextBox ID="txtRecieverCity" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVRecieverCity" runat="server" ControlToValidate="txtRecieverCity" ErrorMessage='Reciever City is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
 
                         <div class="two columns text-left">
@@ -167,12 +179,14 @@
                         </div>
                         <div class="four columns">
                             <asp:TextBox ID="txtRecieverState" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVRecieverState" runat="server" ControlToValidate="txtRecieverState" ErrorMessage='Reciever State is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
                         <div class="two columns text-left">
                             Pincode: *
                         </div>
                         <div class="four columns">
                             <asp:TextBox ID="txtRecieverPincode" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RFVRecieverPincode" runat="server" ControlToValidate="txtRecieverPincode" ErrorMessage='RecieverPincode is required.' Display="None" ValidationGroup="SAVE"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     <hr />

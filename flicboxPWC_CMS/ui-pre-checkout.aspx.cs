@@ -32,7 +32,7 @@ namespace flicboxPWC_CMS
         {
             try
             {
-                if(!IsPostBack)
+                if (!IsPostBack)
                 {
                     if (ShoppingCart.Instance.Items.Count <= 0)
                     {
@@ -48,25 +48,55 @@ namespace flicboxPWC_CMS
                         if (ObjOrder.GetGiftItemExists())
                         {
                             divGiftDetails.Style["display"] = "block";
+                            RFVSenderName.Enabled = true;
+                            RFVSenderAddress.Enabled = true;
+                            RFVSenderEmail.Enabled = true;
+                            RFVSenderPhone.Enabled = true;
+                            RFVSenderCity.Enabled = true;
+                            RFVSenderState.Enabled = true;
+                            RFVSenderPincode.Enabled = true;
+                            RFVRecieverName.Enabled = true;
+                            RFVRecieverEmailID.Enabled = true;
+                            RFVRecieverPhone.Enabled = true;
+                            RFVRecieverAddress.Enabled = true;
+                            RFVRecieverCity.Enabled = true;
+                            RFVRecieverState.Enabled = true;
+                            RFVRecieverPincode.Enabled = true;
+
                         }
                         else
                         {
                             divGiftDetails.Style["display"] = "none";
+
+                            RFVSenderName.Enabled = false;
+                            RFVSenderAddress.Enabled = false;
+                            RFVSenderEmail.Enabled = false;
+                            RFVSenderPhone.Enabled = false;
+                            RFVSenderCity.Enabled = false;
+                            RFVSenderState.Enabled = false;
+                            RFVSenderPincode.Enabled = false;
+                            RFVRecieverName.Enabled = false;
+                            RFVRecieverEmailID.Enabled = false;
+                            RFVRecieverPhone.Enabled = false;
+                            RFVRecieverAddress.Enabled = false;
+                            RFVRecieverCity.Enabled = false;
+                            RFVRecieverState.Enabled = false;
+                            RFVRecieverPincode.Enabled = false;
                         }
-                        
+
                     }
                 }
-                
+
             }
             catch (System.Threading.ThreadInterruptedException) { }
             catch (Exception)
             {
-                
+
                 throw;
             }
 
-            
-            
+
+
         }
 
         protected void btnProceed_Click(object sender, EventArgs e)
@@ -79,17 +109,17 @@ namespace flicboxPWC_CMS
                     OrderDetails._instance._OrderMaster.Precheckout.birthdate = txtBirthdate.Text.Trim();
                     OrderDetails._instance._OrderMaster.Precheckout.preferencesDiet = ddlPreferenceDiet.SelectedValue;
                     OrderDetails._instance._OrderMaster.Precheckout.preferencesTaste = ddlPreferenceTaste.SelectedValue;
-                    
-                    if(divGiftDetails.Style["display"] == "block")
+
+                    if (divGiftDetails.Style["display"] == "block")
                     {
                         OrderDetails._instance._OrderMaster.Precheckout.IsGiftExist = true;
                         OrderDetails._instance._OrderMaster.Precheckout.GiftSenderName = txtSenderName.Text;
-                        OrderDetails._instance._OrderMaster.Precheckout.GiftSenderEmailID= txtSenderEmailID.Text;
-                        OrderDetails._instance._OrderMaster.Precheckout.GiftSenderPhone= txtSenderPhone.Text;
+                        OrderDetails._instance._OrderMaster.Precheckout.GiftSenderEmailID = txtSenderEmailID.Text;
+                        OrderDetails._instance._OrderMaster.Precheckout.GiftSenderPhone = txtSenderPhone.Text;
                         OrderDetails._instance._OrderMaster.Precheckout.GiftSenderAddress = txtSenderAddress.Text;
                         OrderDetails._instance._OrderMaster.Precheckout.GiftSenderState = txtSenderState.Text;
                         OrderDetails._instance._OrderMaster.Precheckout.GiftSenderCity = txtSenderCity.Text;
-                        OrderDetails._instance._OrderMaster.Precheckout.GiftSenderPincode= txtSenderPincode.Text;
+                        OrderDetails._instance._OrderMaster.Precheckout.GiftSenderPincode = txtSenderPincode.Text;
                         OrderDetails._instance._OrderMaster.Precheckout.GiftRecieverName = txtRecieverName.Text;
                         OrderDetails._instance._OrderMaster.Precheckout.GiftRecieverEmailID = txtRecieverEmailID.Text;
                         OrderDetails._instance._OrderMaster.Precheckout.GiftRecieverPhone = txtRecieverPhone.Text;
@@ -104,7 +134,7 @@ namespace flicboxPWC_CMS
                     OrderDetails._instance.AddOrderDetails(OrderDetails._instance._OrderMaster);
                     Response.Redirect("ui-checkout.aspx", true);
                 }
-                
+
 
             }
             catch (System.Threading.ThreadInterruptedException) { }
@@ -114,7 +144,7 @@ namespace flicboxPWC_CMS
                 throw;
             }
 
-            
+
         }
     }
 }
