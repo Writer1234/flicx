@@ -13,10 +13,12 @@
     <meta name="author" content="Prasad Web Creations" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="css/SkewedCSS.css" rel="stylesheet" />
     <%--<link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />--%>
     <link rel="stylesheet" type="text/css" href="css/style-intro.css" />
     <link rel="stylesheet" href="css/retina.css" />
-    <link href="css/SkewedCSS.css" rel="stylesheet" />
+    
+
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="images/favicon.png" />
@@ -88,10 +90,11 @@
                 </div>
             </nav>
         </header>
-        <div style="height:100px;width:100%;padding-top:150px">&nbsp&nbsp</div>
-        <table>
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                <ContentTemplate>
+        <div class="skw-pages">
+            <table>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <%--    
                     <asp:Repeater ID="rptProducts" runat="server">
                         <HeaderTemplate>
                             <tbody>
@@ -143,11 +146,43 @@
                         <tfoot>
                         </tfoot>
                         </FooterTemplate>
-                    </asp:Repeater>
-                </ContentTemplate>
-            </asp:UpdatePanel>
+                    </asp:Repeater> 
 
-        </table>
+                        --%>
+                        <!--new code added-->
+                        <asp:Repeater ID="rptProducts" runat="server" OnItemDataBound="rptProducts_ItemDataBound">
+                            <HeaderTemplate>
+                                <tbody>
+                            </HeaderTemplate>
+                            <ItemTemplate>
+                                <tr style="width: 100%">
+                                    <td style="width: 100%">
+                                        <div class='skw-page skw-page-<%# ((Container.ItemIndex + 1) == 1) ? (Container.ItemIndex + 1).ToString() +" active" : (Container.ItemIndex + 1).ToString()   %>'>
+                                            <div class="skw-page__half skw-page__half--left">
+                                                <div class="skw-page__skewed">
+                                                    <asp:PlaceHolder ID="skw_left" runat="server"></asp:PlaceHolder>
+                                                </div>
+                                            </div>
+                                            <div class="skw-page__half skw-page__half--right">
+                                                <div class="skw-page__skewed">
+                                                    <asp:PlaceHolder ID="skw_right" runat="server"></asp:PlaceHolder>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                </tbody>
+                        <tfoot>
+                        </tfoot>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+
+            </table>
+        </div>
 
     </form>
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -167,11 +202,81 @@
             });
         })(jQuery);
     </script>
+
+    <!--new jquery-->
+    <script>
+        $(document).ready(function () {
+
+            var curPage = 1;
+            var numOfPages = $(".skw-page").length;
+            var animTime = 1000;
+            var scrolling = false;
+            var pgPrefix = ".skw-page-";
+
+            function pagination() {
+                scrolling = true;
+
+                $(pgPrefix + curPage).removeClass("inactive").addClass("active");
+                $(pgPrefix + (curPage - 1)).addClass("inactive");
+                $(pgPrefix + (curPage + 1)).removeClass("active");
+
+                setTimeout(function () {
+                    scrolling = false;
+                }, animTime);
+            };
+
+            function navigateUp() {
+                if (curPage === 1) return;
+                curPage--;
+                pagination();
+            };
+
+            function navigateDown() {
+                if (curPage === numOfPages) return;
+                curPage++;
+                pagination();
+            };
+
+            $(document).on("mousewheel DOMMouseScroll", function (e) {
+                if (scrolling) return;
+                if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+                    navigateUp();
+                } else {
+                    navigateDown();
+                }
+            });
+
+            $(document).on("keydown", function (e) {
+                if (scrolling) return;
+                if (e.which === 38) {
+                    navigateUp();
+                } else if (e.which === 40) {
+                    navigateDown();
+                }
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
     <script type="text/javascript" src="js/jquery.easings.min.js"></script>
     <%--<script type="text/javascript" src="js/jquery.multiscroll.js"></script>--%>
     <script type="text/javascript" src="js/classie.js"></script>
     <script type="text/javascript" src="js/uiMorphingButton_fixed.js"></script>
     <script type="text/javascript" src="js/flippy.js"></script>
-    <%--    <script type="text/javascript" src="js/template-intro.js"></script>--%>
+        <script type="text/javascript" src="js/template-intro.js"></script>
 </body>
 </html>
