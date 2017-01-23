@@ -10,141 +10,123 @@
 namespace flicboxPWC_CMS.flicboxAdmin {
     
     
-    public partial class flicboxAdmin {
+    public partial class OrderMaster {
         
         /// <summary>
-        /// head control.
+        /// OrderPanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.UpdatePanel OrderPanel;
         
         /// <summary>
-        /// form1 control.
+        /// successmsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl successmsg;
         
         /// <summary>
-        /// lnkDashboard control.
+        /// lblSuccess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkDashboard;
+        protected global::System.Web.UI.WebControls.Label lblSuccess;
         
         /// <summary>
-        /// lnkPlans control.
+        /// errormsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkPlans;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errormsg;
         
         /// <summary>
-        /// lnkManagePlans control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkManagePlans;
+        protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// lnkManageShop control.
+        /// HFVOrderID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkManageShop;
+        protected global::System.Web.UI.WebControls.HiddenField HFVOrderID;
         
         /// <summary>
-        /// lnkCorpGift control.
+        /// lblOrderID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkCorpGift;
+        protected global::System.Web.UI.WebControls.Label lblOrderID;
         
         /// <summary>
-        /// lnkContactus control.
+        /// lblOrderStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkContactus;
+        protected global::System.Web.UI.WebControls.Label lblOrderStatus;
         
         /// <summary>
-        /// lnkManageOrder control.
+        /// lblAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkManageOrder;
+        protected global::System.Web.UI.WebControls.Literal lblAddress;
         
         /// <summary>
-        /// lnkUserDetails control.
+        /// lblOrderDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkUserDetails;
+        protected global::System.Web.UI.WebControls.Label lblOrderDate;
         
         /// <summary>
-        /// lnkManageUser control.
+        /// grdvwOrderDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkManageUser;
+        protected global::System.Web.UI.WebControls.GridView grdvwOrderDetails;
         
         /// <summary>
-        /// lnkHome control.
+        /// btnConfirmOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkHome;
+        protected global::System.Web.UI.WebControls.Button btnConfirmOrder;
         
         /// <summary>
-        /// lnkManageHome control.
+        /// btnCancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lnkManageHome;
-        
-        /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btnCancel;
     }
 }

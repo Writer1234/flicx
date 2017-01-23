@@ -72,8 +72,8 @@
                             <li runat="server" id="lnkManageShop"><a href="manage-shop.aspx"><i class="fa fa-fw fa-shopping-bag"></i> Manage Shop Page</a></li>
                             <li runat="server" id="lnkCorpGift"><a href="corporate-gifting-master.aspx"><i class="fa fa-fw fa-gift"></i> Corporate Gifting</a></li>
                             <li runat="server" id="lnkContactus"><a href="contact-us-master.aspx"><i class="fa fa-fw fa-envelope-open"></i> Contact Us Master</a></li>
-                            <li runat="server" id="lnkOrderMaster"><a href="#"><i class="fa fa-fw fa-clone"></i> Orders Master</a></li>
-                            <li runat="server" id="lnkManageOrder"><a href="#"><i class="fa fa-fw fa-clone"></i> Manage Orders</a></li>
+                            <%--<li runat="server" id="lnkOrderMaster"><a href="#"><i class="fa fa-fw fa-clone"></i> Orders Master</a></li>--%>
+                            <li runat="server" id="lnkManageOrder"><a href="OrderView.aspx"><i class="fa fa-fw fa-clone"></i> Manage Orders</a></li>
                             <li runat="server" id="lnkUserDetails"><a href="#"><i class="fa fa-fw fa-address-book"></i> User Details Master</a></li>
                             <li runat="server" id="lnkManageUser"><a href="#"><i class="fa fa-fw fa-address-book"></i> Manage User Details</a></li>
                             <li runat="server" id="lnkHome" ><a href="#"><i class="fa fa-fw fa-home"></i> Home Page Master</a></li>
@@ -84,6 +84,7 @@
                 </nav>
 
                 <div id="page-wrapper">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" />
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>

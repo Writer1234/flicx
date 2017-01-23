@@ -44,13 +44,14 @@ namespace flicboxPWC_CMS
                         string OrderID = objURL.DecryptText(Convert.ToString(Request.QueryString["Orm"]));
                         if (!string.IsNullOrWhiteSpace(OrderID))
                         {
+                            int OID = Convert.ToInt32(OrderID);
 
                             using (SqlConnection Con = new SqlConnection(conStr))
                             {
 
                                 SqlCommand cmd = new SqlCommand();
                                 cmd.Connection = Con;
-                                cmd.CommandText = string.Format("select 1 from ordersmaster where intorderid={0}", OrderID);
+                                cmd.CommandText = string.Format("select 1 from ordersmaster where intorderid='{0}';", OID.ToString());
                                 cmd.CommandType = System.Data.CommandType.Text;
                                 Con.Open();
                                 var data = cmd.ExecuteScalar();
