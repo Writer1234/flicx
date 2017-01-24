@@ -37,8 +37,8 @@ namespace flicboxPWC_CMS.flicboxAdmin
 
                 if (!IsPostBack)
                 {
-                    txtFromDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-                    txtToDate.Text = DateTime.Now.AddDays(-5).ToString("yyyy-MM-dd");
+                    txtToDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                    txtFromDate.Text = DateTime.Now.AddDays(-5).ToString("yyyy-MM-dd");
                     txtCustName.Text = string.Empty;
                     divStatus.Visible = false;
                    

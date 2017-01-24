@@ -80,8 +80,12 @@ namespace flicboxPWC_CMS
 
 
                 }
+                //else
+                //{
+
+                //}
             }
-            catch(System.Threading.ThreadInterruptedException) { }
+            catch(System.Threading.ThreadAbortException) { }
             catch (Exception ex)
             {
 
@@ -101,10 +105,11 @@ namespace flicboxPWC_CMS
 
                 string ProductID = dllMonthSub.SelectedValue;
                 ShoppingCart.Instance.AddItem(Convert.ToInt32(ProductID));
+                rptProducts.DataBind();
                 Response.Redirect("cart.aspx", true);
                 
             }
-            catch (System.Threading.ThreadInterruptedException) { }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception)
             {
 
@@ -123,7 +128,7 @@ namespace flicboxPWC_CMS
                 ShoppingCart.Instance.AddItem(Convert.ToInt32(ProductID),ProductType.OneTime);
                 Response.Redirect("cart.aspx", true);
             }
-            catch (System.Threading.ThreadInterruptedException) { }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception)
             {
 
@@ -141,7 +146,7 @@ namespace flicboxPWC_CMS
                 Response.Redirect(string.Format("ui-pre-checkout-gift.aspx?rnd={0}&Type={1}", random, objURL.encrytedText(ProductType.Gift.ToString())), true);
 
             }
-            catch (System.Threading.ThreadInterruptedException) { }
+            catch (System.Threading.ThreadAbortException) { }
             catch (Exception)
             {
 
@@ -151,7 +156,91 @@ namespace flicboxPWC_CMS
 
         protected void rptProducts_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
+            RepeaterItem item = e.Item;
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                //PlaceHolder skw_left = e.Item.FindControl("skw_left") as PlaceHolder;
+                //PlaceHolder skw_right = e.Item.FindControl("skw_right") as PlaceHolder;
+                //HtmlGenericControl divContent = new HtmlGenericControl("div");
+                DataRowView row = (DataRowView)e.Item.DataItem;
+                Label lblName = (Label)item.FindControl("lblProductName");
+                //lblName.ID = "lblProductName";
+                lblName.Text = row["CategoryName"].ToString();
+                string imagePath = row["ImagePath1"].ToString();
+                SqlDataSource sqlDataSource1 = new SqlDataSource();
+                sqlDataSource1.ConnectionString = conStr;
+                sqlDataSource1.CancelSelectOnNullParameter = true;
+                sqlDataSource1.SelectCommand = string.Format("exec [dbo].[GetSubscriptionTypeCombo] @SP_TYPE='ByProductName', @SP_Searchstring='{0}'", lblName.Text.Trim().Replace("'", "''"));
+                sqlDataSource1.DataBind();
+                //divContent.Attributes["class"] = "skw-page__content";
+                 Image image = (Image)item.FindControl("example");
+                //image.Style["width"] = "100%";
+                //image.Style["height"] = "100%";
+                DropDownList ddlSubScription = (DropDownList)item.FindControl("ddlSubScription");
+                ddlSubScription.DataSource = sqlDataSource1;
+                ddlSubScription.DataValueField = "ID";
+                ddlSubScription.DataTextField = "VALUE";
+                ddlSubScription.AutoPostBack = false;
+                ddlSubScription.DataBind();
+
+
+                if (!string.IsNullOrWhiteSpace(imagePath))
+                {
+                    image.ImageUrl = imagePath;
+                    //INSERT CODE HERE
+                }
+                //Literal LtH1Start = new Literal();
+                //LtH1Start.Text = "<h2 class='skw-page__heading'>";
+                //Literal LtH1End = new Literal();
+                //LtH1End.Text = "</h2>";
+                //Literal LtPStart = new Literal();
+                //LtPStart.Text = "<p class='skw-page__description'>";
+                //Literal LtPEnd = new Literal();
+                //LinkButton btnSubscribe = new LinkButton();
+                //btnSubscribe.CssClass = "btn-default";
+                //btnSubscribe.ID = "btnSubscribe";
+                //btnSubscribe.Text = "Subscribe";
+                //btnSubscribe.Click += new System.EventHandler(this.btnSubscribe_Click);
+                //LinkButton btnOneTime = new LinkButton();
+                //btnOneTime.CssClass = "btn-default";
+                //btnOneTime.ID = "btnOneTime";
+                //btnOneTime.Text = "OneTime";
+                //btnOneTime.Click += new System.EventHandler(this.btnOneTime_Click);
+                //LinkButton btnGift = new LinkButton();
+                //btnGift.CssClass = "btn-default";
+                //btnGift.ID = "btnGift";
+                //btnGift.Text = "Gift";
+                //btnGift.Click += new System.EventHandler(this.btnGift_Click);
+                //LtPEnd.Text = "</p>";
+
+                //divContent.Controls.Add(LtH1Start);
+                //divContent.Controls.Add(lblName);
+                //divContent.Controls.Add(LtH1End);
+                //divContent.Controls.Add(LtPStart);
+                //divContent.Controls.Add(ddlSubScription);
+                //divContent.Controls.Add(btnSubscribe);
+                //divContent.Controls.Add(btnOneTime);
+                //divContent.Controls.Add(btnGift);
+                //divContent.Controls.Add(LtPEnd);
+
+                //if (e.Item.ItemIndex % 2 == 0)
+                //{
+                //    skw_right.Controls.Add(divContent);
+                //    skw_left.Controls.Add(image);
+                //}
+                //else
+                //{
+                //    skw_left.Controls.Add(divContent);
+                //    skw_right.Controls.Add(image);
+
+                //}
+
+            }
+        }
+
+        protected void rptProducts_ItemCreated(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.AlternatingItem || e.Item.ItemType == ListItemType.Item)
             {
                 PlaceHolder skw_left = e.Item.FindControl("skw_left") as PlaceHolder;
                 PlaceHolder skw_right = e.Item.FindControl("skw_right") as PlaceHolder;
@@ -159,32 +248,33 @@ namespace flicboxPWC_CMS
                 DataRowView row = (DataRowView)e.Item.DataItem;
                 Label lblName = new Label();
                 lblName.ID = "lblProductName";
-                lblName.Text = row["CategoryName"].ToString();
-                string imagePath = row["ImagePath1"].ToString();
-                SqlDataSource sqlDataSource1 = new SqlDataSource();
-                sqlDataSource1.ConnectionString = conStr;
-                sqlDataSource1.CancelSelectOnNullParameter = true;
-                sqlDataSource1.SelectCommand = string.Format("exec [dbo].[GetSubscriptionTypeCombo] @SP_TYPE='ByProductName', @SP_Searchstring='{0}'", lblName.Text.Trim().Replace("'","''"));
-                sqlDataSource1.DataBind();
+                //lblName.Text = row["CategoryName"].ToString();
+                //string imagePath = row["ImagePath1"].ToString();
+                //SqlDataSource sqlDataSource1 = new SqlDataSource();
+                //sqlDataSource1.ConnectionString = conStr;
+                //sqlDataSource1.CancelSelectOnNullParameter = true;
+                //sqlDataSource1.SelectCommand = string.Format("exec [dbo].[GetSubscriptionTypeCombo] @SP_TYPE='ByProductName', @SP_Searchstring='{0}'", lblName.Text.Trim().Replace("'", "''"));
+                //sqlDataSource1.DataBind();
 
                 divContent.Attributes["class"] = "skw-page__content";
                 Image image = new Image();
+                image.ID = "example";
                 image.Style["width"] = "100%";
                 image.Style["height"] = "100%";
                 DropDownList ddlSubScription = new DropDownList();
                 ddlSubScription.ID = "ddlSubScription";
-                ddlSubScription.DataSource = sqlDataSource1;
-                ddlSubScription.DataValueField = "ID";
-                ddlSubScription.DataTextField = "VALUE";
+                //ddlSubScription.DataSource = sqlDataSource1;
+                //ddlSubScription.DataValueField = "ID";
+                //ddlSubScription.DataTextField = "VALUE";
                 ddlSubScription.AutoPostBack = false;
                 ddlSubScription.DataBind();
 
-               
-                if (!string.IsNullOrWhiteSpace(imagePath))
-                {
-                    image.ImageUrl = imagePath;
-                    //INSERT CODE HERE
-                }
+
+                //if (!string.IsNullOrWhiteSpace(imagePath))
+                //{
+                //    image.ImageUrl = imagePath;
+                //    //INSERT CODE HERE
+                //}
                 Literal LtH1Start = new Literal();
                 LtH1Start.Text = "<h2 class='skw-page__heading'>";
                 Literal LtH1End = new Literal();
@@ -196,17 +286,17 @@ namespace flicboxPWC_CMS
                 btnSubscribe.CssClass = "btn-default";
                 btnSubscribe.ID = "btnSubscribe";
                 btnSubscribe.Text = "Subscribe";
-                btnSubscribe.Click += btnSubscribe_Click;
+                btnSubscribe.Click += new System.EventHandler(this.btnSubscribe_Click);
                 LinkButton btnOneTime = new LinkButton();
                 btnOneTime.CssClass = "btn-default";
                 btnOneTime.ID = "btnOneTime";
                 btnOneTime.Text = "OneTime";
-                btnOneTime.Click += btnOneTime_Click;
+                btnOneTime.Click += new System.EventHandler(this.btnOneTime_Click);
                 LinkButton btnGift = new LinkButton();
                 btnGift.CssClass = "btn-default";
                 btnGift.ID = "btnGift";
                 btnGift.Text = "Gift";
-                btnGift.Click += btnGift_Click;
+                btnGift.Click += new System.EventHandler(this.btnGift_Click);
                 LtPEnd.Text = "</p>";
 
                 divContent.Controls.Add(LtH1Start);

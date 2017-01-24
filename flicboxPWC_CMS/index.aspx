@@ -17,8 +17,6 @@
     <%--<link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.css" />--%>
     <link rel="stylesheet" type="text/css" href="css/style-intro.css" />
     <link rel="stylesheet" href="css/retina.css" />
-    
-
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" href="images/favicon.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="images/favicon.png" />
@@ -90,12 +88,11 @@
                 </div>
             </nav>
         </header>
-        <div class="skw-pages">
-            <table>
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-                    <ContentTemplate>
-                        <%--    
-                    <asp:Repeater ID="rptProducts" runat="server">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
+            <ContentTemplate>
+                <div class="skw-pages" style="padding-top: 100px">
+                    <table>
+                        <%--<asp:Repeater ID="rptProducts" runat="server">
                         <HeaderTemplate>
                             <tbody>
                         </HeaderTemplate>
@@ -146,11 +143,9 @@
                         <tfoot>
                         </tfoot>
                         </FooterTemplate>
-                    </asp:Repeater> 
-
-                        --%>
+                    </asp:Repeater> --%>
                         <!--new code added-->
-                        <asp:Repeater ID="rptProducts" runat="server" OnItemDataBound="rptProducts_ItemDataBound">
+                        <asp:Repeater ID="rptProducts" runat="server" OnItemDataBound="rptProducts_ItemDataBound" OnItemCreated="rptProducts_ItemCreated" >
                             <HeaderTemplate>
                                 <tbody>
                             </HeaderTemplate>
@@ -178,12 +173,12 @@
                         </tfoot>
                             </FooterTemplate>
                         </asp:Repeater>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
 
-            </table>
-        </div>
 
+                    </table>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
     </form>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -274,9 +269,9 @@
 
     <script type="text/javascript" src="js/jquery.easings.min.js"></script>
     <%--<script type="text/javascript" src="js/jquery.multiscroll.js"></script>--%>
-    <script type="text/javascript" src="js/classie.js"></script>
+    <%--    <script type="text/javascript" src="js/classie.js"></script>
     <script type="text/javascript" src="js/uiMorphingButton_fixed.js"></script>
     <script type="text/javascript" src="js/flippy.js"></script>
-        <script type="text/javascript" src="js/template-intro.js"></script>
+        <script type="text/javascript" src="js/template-intro.js"></script>--%>
 </body>
 </html>

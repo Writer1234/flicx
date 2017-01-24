@@ -45,7 +45,7 @@
                 <i class="fa fa-times-circle"></i>
                 <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
             </div>
-            <asp:HiddenField ID="HFVOrderID" runat="server" />
+            <asp:HiddenField ID="HFVOrderID" runat="server"  Visible="false" />
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
